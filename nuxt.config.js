@@ -11,18 +11,7 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
-  env: {
-    firebaseApiKey: process.env.API_KEY || "default value",
-    HOST: "https://vue-invoice-calc-back.herokuapp.com",
-    PORT: 80
-  },
-
   ssr: false,
-  server: {
-    protocol: process.env.PROTOCOL,
-    host: process.env.HOST,
-    port: process.env.PORT
-  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [{ src: "assets/styles/global.scss", lang: "scss" }],
@@ -60,7 +49,9 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.SERVER_HOST || "http://localhost:9000/api/"
+    baseURL:
+      process.env.SERVER_HOST ||
+      "https://vue-invoice-calc-back.herokuapp.com/api/"
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
