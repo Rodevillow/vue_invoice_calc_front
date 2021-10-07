@@ -11,6 +11,12 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
+  env: {
+    firebaseApiKey: process.env.API_KEY || "default value",
+    HOST: "https://vue-invoice-calc-back.herokuapp.com",
+    PORT: 80
+  },
+
   ssr: false,
   server: {
     protocol: process.env.PROTOCOL,
