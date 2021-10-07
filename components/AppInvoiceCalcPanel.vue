@@ -1,18 +1,21 @@
 <template>
   <div class="invoice-calc__panel">
     <AppInput
+      class="invoice-calc__panel__field--name"
       inputType="text"
       placeholder="Product name"
       :value="form.title"
       @input="handleInputProduct"
     />
     <AppInput
+      class="invoice-calc__panel__field--price"
       inputType="number"
       placeholder="Price"
       :value="form.price"
       @input="handleInputPrice"
     />
     <AppInput
+      class="invoice-calc__panel__field--quantity"
       inputType="number"
       placeholder="Qty"
       :value="form.quantity"
@@ -88,5 +91,21 @@ export default {
 .invoice-calc__panel {
   display: grid;
   grid-template-columns: 2fr 80px 80px 80px;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+
+  &__field {
+    &--name {
+      padding: 20px;
+    }
+    &--price {
+      padding: 5px;
+      text-align: center;
+    }
+    &--quantity {
+      padding: 5px;
+      text-align: center;
+    }
+  }
 }
 </style>

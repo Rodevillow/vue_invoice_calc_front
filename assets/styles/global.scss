@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap-vue/src/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates&display=swap");
 
 * {
   margin: 0;
@@ -8,6 +9,8 @@
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #dcdcdcba;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  background-color: #151414e0;
+  color: white;
 }

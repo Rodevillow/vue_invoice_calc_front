@@ -5,11 +5,10 @@
       @checked-all="handleCheckedAll"
     />
     <b-overlay :show="this.getIsLoad">
+      <!-- <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
       <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
       <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
-      <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
-      <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
-      <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
+      <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" /> -->
 
       <AppInvoiceCalcTableRowBody
         v-for="product in getProducts"
@@ -81,6 +80,6 @@ export default {
 
 <style lang="scss" scoped>
 .invoice-calc__table {
-  border: 1px solid #333c3f;
+  // code...
 }
 </style>

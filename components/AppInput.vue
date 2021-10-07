@@ -34,9 +34,16 @@ export default {
 <style lang="scss" scoped>
 input {
   width: 100%;
-  padding: 0 10px;
-  border-radius: 0;
-  border: 1px solid #333b3f;
+  padding: 0px 20px;
+  height: 60px;
+  border: none;
+  border-radius: 7px;
   outline: none;
+  background-color: #333631;
+  color: white;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.445);
+  }
 }
 </style>

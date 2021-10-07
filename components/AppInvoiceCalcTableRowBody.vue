@@ -8,10 +8,18 @@
         :checked="isChecked"
       />
     </div>
-    <div class="invoice-calc__table__row__cell">{{ productData.title }}</div>
-    <div class="invoice-calc__table__row__cell">${{ productData.price }}</div>
-    <div class="invoice-calc__table__row__cell">{{ productData.quantity }}</div>
-    <div class="invoice-calc__table__row__cell">
+    <div class="invoice-calc__table__row__cell cell--name">
+      {{ productData.title }}
+    </div>
+    <!-- <div class="invoice-calc__table__row__cell cell--price">
+      ${{ productData.price }}
+    </div> -->
+    <div class="invoice-calc__table__row__cell cell--quantity">
+      {{ productData.quantity }}
+    </div>
+    <div class="invoice-calc__table__row__cell cell--price-total">
+      ${{ productData.price }}
+      <br />
       ${{ productData.price * productData.quantity }}
     </div>
   </div>
@@ -45,14 +53,17 @@ export default {
 <style lang="scss" scoped>
 .invoice-calc__table__row {
   display: grid;
-  grid-template-columns: 50px 1fr 100px 80px 100px;
+  grid-template-columns: 50px 1fr 50px 100px;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  border-radius: 7px;
 
   &:nth-child(even) {
-    background-color: gainsboro;
+    background-color: #76532e38;
   }
 
   &:nth-child(odd) {
-    background-color: lightgray;
+    background-color: #4caf500d;
   }
 
   &__cell {
@@ -61,6 +72,39 @@ export default {
     justify-content: left;
     align-items: center;
     padding: 10px;
+
+    &.cell--name {
+      padding: 20px;
+    }
+
+    &.cell--price {
+      padding: 5px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.cell--quantity {
+      padding: 5px;
+      text-align: center;
+      font-size: 20px;
+      color: #98632b;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Bebas Neue", cursive;
+    }
+
+    &.cell--price-total {
+      padding: 5px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Bebas Neue", cursive;
+    }
   }
 }
 </style>

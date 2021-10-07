@@ -45,8 +45,12 @@ export default {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0px;
     font-weight: bold;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 4px;
+    color: #98622b;
+    font-size: 20px;
   }
 }
 </style>

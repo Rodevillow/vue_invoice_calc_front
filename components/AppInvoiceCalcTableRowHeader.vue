@@ -9,10 +9,13 @@
         :checked="isChecked"
       />
     </div>
-    <div class="invoice-calc__table__row__cell">Product name</div>
-    <div class="invoice-calc__table__row__cell">Price</div>
-    <div class="invoice-calc__table__row__cell">Qta</div>
-    <div class="invoice-calc__table__row__cell">Sum</div>
+    <div class="invoice-calc__table__row__cell cell--name">Product name</div>
+    <!-- <div class="invoice-calc__table__row__cell cell--price">Price</div> -->
+    <div class="invoice-calc__table__row__cell cell--quantity">Qta</div>
+    <div class="invoice-calc__table__row__cell cell--price-total">
+      Price <br />
+      Sum
+    </div>
   </div>
 </template>
 
@@ -50,8 +53,11 @@ export default {
 <style lang="scss" scoped>
 .invoice-calc__table__row {
   display: grid;
-  grid-template-columns: 50px 1fr 100px 80px 100px;
-  background-color: darkgray;
+  grid-template-columns: 50px 1fr 50px 100px;
+  background-color: #de881e63;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  border-radius: 7px;
 
   &__cell {
     min-height: 40px;
@@ -59,6 +65,40 @@ export default {
     justify-content: left;
     align-items: center;
     padding: 10px;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 4px;
+    font-size: 20px;
+
+    &.cell--name {
+      padding: 20px;
+    }
+
+    &.cell--price {
+      padding: 5px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.cell--quantity {
+      padding: 5px;
+      text-align: center;
+      font-size: 20px;
+      color: #98632b;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.cell--price-total {
+      padding: 5px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 </style>

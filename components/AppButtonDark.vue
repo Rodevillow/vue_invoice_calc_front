@@ -15,12 +15,13 @@ export default {
 
 <style lang="scss" scoped>
 button {
-  border: 1px solid #333c3f;
-  border-radius: 0;
+  font-family: "Bebas Neue", cursive;
+  border: none;
+  padding: 0px 20px;
+  font-size: 20px;
+  border-radius: 7px;
+  letter-spacing: 4px;
   outline: none;
-
-  &:disabled {
-    border: 1px solid #333c3f;
-  }
+  height: 60px;
 }
 </style>
