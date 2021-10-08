@@ -3,21 +3,21 @@
     <AppInput
       class="invoice-calc__panel__field--name"
       inputType="text"
-      placeholder="Product name"
+      placeholder="PRODUCT NAME"
       :value="form.title"
       @input="handleInputProduct"
     />
     <AppInput
       class="invoice-calc__panel__field--price"
       inputType="number"
-      placeholder="Price"
+      placeholder="PRICE"
       :value="form.price"
       @input="handleInputPrice"
     />
     <AppInput
       class="invoice-calc__panel__field--quantity"
       inputType="number"
-      placeholder="Qty"
+      placeholder="QTY"
       :value="form.quantity"
       @input="handleInputQuantity"
     />
@@ -90,21 +90,36 @@ export default {
 <style lang="scss" scoped>
 .invoice-calc__panel {
   display: grid;
-  grid-template-columns: 2fr 80px 80px 80px;
+  grid-template-columns: 1fr 120px 80px 80px;
   grid-gap: 20px;
   margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
   &__field {
     &--name {
       padding: 20px;
+      @media screen and (max-width: 768px) {
+        grid-column: 1 / 5;
+      }
     }
     &--price {
       padding: 5px;
       text-align: center;
+      &::placeholder {
+        text-align: center;
+      }
+      @media screen and (max-width: 768px) {
+        grid-column: 1 / 3;
+      }
     }
     &--quantity {
       padding: 5px;
       text-align: center;
+      &::placeholder {
+        text-align: center;
+      }
     }
   }
 }

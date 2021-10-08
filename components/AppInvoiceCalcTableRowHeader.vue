@@ -11,7 +11,7 @@
     </div>
     <div class="invoice-calc__table__row__cell cell--name">Product name</div>
     <!-- <div class="invoice-calc__table__row__cell cell--price">Price</div> -->
-    <div class="invoice-calc__table__row__cell cell--quantity">Qta</div>
+    <div class="invoice-calc__table__row__cell cell--quantity">Qty</div>
     <div class="invoice-calc__table__row__cell cell--price-total">
       Price <br />
       Sum
@@ -55,7 +55,7 @@ export default {
   display: grid;
   grid-template-columns: 50px 1fr 50px 100px;
   background-color: #de881e63;
-  padding: 20px 10px;
+  padding: 10px;
   margin-bottom: 10px;
   border-radius: 7px;
 
@@ -71,6 +71,9 @@ export default {
 
     &.cell--name {
       padding: 20px;
+      @media screen and (max-width: 500px) {
+        grid-column: 2 / 5;
+      }
     }
 
     &.cell--price {
@@ -90,6 +93,9 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
+      @media screen and (max-width: 500px) {
+        grid-column: 3 / 3;
+      }
     }
 
     &.cell--price-total {

@@ -37,6 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 .invoice-calc {
-  // code...
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 </style>

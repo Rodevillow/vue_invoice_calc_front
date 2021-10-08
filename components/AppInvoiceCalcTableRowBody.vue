@@ -18,9 +18,10 @@
       {{ productData.quantity }}
     </div>
     <div class="invoice-calc__table__row__cell cell--price-total">
-      ${{ productData.price }}
-      <br />
-      ${{ productData.price * productData.quantity }}
+      <span class="cell--price">${{ productData.price }}</span>
+      <span class="cell--total">
+        ${{ productData.price * productData.quantity }}
+      </span>
     </div>
   </div>
 </template>
@@ -75,6 +76,9 @@ export default {
 
     &.cell--name {
       padding: 20px;
+      @media screen and (max-width: 500px) {
+        grid-column: 2 / 5;
+      }
     }
 
     &.cell--price {
@@ -95,15 +99,37 @@ export default {
       align-items: center;
       justify-content: center;
       font-family: "Bebas Neue", cursive;
+      @media screen and (max-width: 500px) {
+        grid-column: 3 / 3;
+      }
     }
 
     &.cell--price-total {
       padding: 5px;
       text-align: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       font-family: "Bebas Neue", cursive;
+    }
+
+    .cell--price {
+      font-size: 18px;
+      color: #98622b;
+    }
+
+    .cell--total {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 500px) {
+      .cell--price {
+        font-size: 22px;
+      }
+      .cell--total {
+        font-size: 28px;
+      }
     }
   }
 }

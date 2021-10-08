@@ -4,7 +4,13 @@
       :checkedIds="checkedIds"
       @checked-all="handleCheckedAll"
     />
-    <b-overlay :show="this.getIsLoad">
+    <b-overlay
+      :show="this.getIsLoad"
+      :opacity="0.4"
+      blur="10px"
+      bg-color="#333631"
+      rounded="sm"
+    >
       <!-- <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
       <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
       <AppInvoiceCalcTableRowBodyPlaceholder v-if="getProducts.length === 0" />
