@@ -5,11 +5,18 @@
         Delete
       </AppButtonDark>
     </div>
-    <div class="invoice-calc__table__row__cell">Total: $ 412402</div>
+    <div class="invoice-calc__table__row__cell">Total: $ {{ getTotalSum }}</div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+import {
+  INVOICE_CALC_NAMESPACE_PREFIX,
+  DO_REMOVE_PRODUCTS,
+  DO_LOAD_PRODUCTS
+} from "@/store/invoice_calc/index";
+
 import AppButtonDark from "@/components/AppButtonDark";
 
 export default {
@@ -23,8 +30,20 @@ export default {
     AppButtonDark
   },
   computed: {
+    ...mapGetters({
+      getProducts: INVOICE_CALC_NAMESPACE_PREFIX + "getProducts"
+    }),
     isDisabled() {
       return this.checkedIds.length === 0;
+    },
+    getTotalSum() {
+      let total = 0;
+
+      this.getProducts.forEach(x => {
+        total = total + x.price * x.quantity;
+      });
+
+      return total;
     }
   },
   methods: {
