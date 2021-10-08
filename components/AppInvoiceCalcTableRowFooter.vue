@@ -10,12 +10,8 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
-import {
-  INVOICE_CALC_NAMESPACE_PREFIX,
-  DO_REMOVE_PRODUCTS,
-  DO_LOAD_PRODUCTS
-} from "@/store/invoice_calc/index";
+import { mapGetters } from "vuex";
+import { INVOICE_CALC_NAMESPACE_PREFIX } from "@/store/invoice_calc/index";
 
 import AppButtonDark from "@/components/AppButtonDark";
 
