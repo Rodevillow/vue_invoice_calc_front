@@ -38,7 +38,7 @@ export default {
   ],
 
   styleResources: {
-    scss: []
+    scss: ["assets/styles/_variables.scss"]
   },
 
   // Bootstrap settings

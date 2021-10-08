@@ -64,7 +64,7 @@ export default {
     font-weight: bold;
     font-family: "Bebas Neue", cursive;
     letter-spacing: 4px;
-    color: #98622b;
+    color: $accent;
     font-size: 20px;
   }
 }

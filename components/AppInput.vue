@@ -39,11 +39,11 @@ input {
   border: none;
   border-radius: 7px;
   outline: none;
-  background-color: #333631;
-  color: white;
+  background-color: $dark_bg;
+  color: $white;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.445);
+    color: $placeholder;
   }
 }
 </style>

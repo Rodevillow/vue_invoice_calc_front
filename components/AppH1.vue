@@ -5,7 +5,7 @@
 <style lang="scss" scoped>
 h1 {
   font-family: "Bebas Neue", cursive;
-  color: #76532e;
+  color: $accent_bg;
   letter-spacing: 10px;
   text-align: center;
   margin-bottom: 40px;

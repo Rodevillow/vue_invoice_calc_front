@@ -54,7 +54,7 @@ export default {
 .invoice-calc__table__row {
   display: grid;
   grid-template-columns: 50px 1fr 50px 100px;
-  background-color: #de881e63;
+  background-color: $accent_bg;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 7px;
@@ -88,7 +88,7 @@ export default {
       padding: 5px;
       text-align: center;
       font-size: 20px;
-      color: #98632b;
+      color: $accent;
       font-weight: bold;
       display: flex;
       align-items: center;

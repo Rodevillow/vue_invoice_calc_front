@@ -60,11 +60,11 @@ export default {
   border-radius: 7px;
 
   &:nth-child(even) {
-    background-color: #76532e38;
+    background-color: $table_row_even;
   }
 
   &:nth-child(odd) {
-    background-color: #4caf500d;
+    background-color: $table_row_odd;
   }
 
   &__cell {
@@ -93,7 +93,7 @@ export default {
       padding: 5px;
       text-align: center;
       font-size: 20px;
-      color: #98632b;
+      color: $accent;
       font-weight: bold;
       display: flex;
       align-items: center;
@@ -116,7 +116,7 @@ export default {
 
     .cell--price {
       font-size: 18px;
-      color: #98622b;
+      color: $accent;
     }
 
     .cell--total {
